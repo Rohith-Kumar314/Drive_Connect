@@ -28,7 +28,7 @@ const userSchema = new mongoose.Schema({
         unique:true, //it cant be written as an error message like above since it only creates 
         match: [/^[6-9]\d{9}$/, "Enter a valid 10-digit mobile number"],
     },
-    roles:{
+    role:{
         type:String,
         enum:["user","driver","owner", "admin"],
         required:[true,"Role is required"],
